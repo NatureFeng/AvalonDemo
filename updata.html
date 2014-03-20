@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="喵喵喵公司工资管理系统">
+	<meta name="author" content="NatureFeng">
+	<link rel="shortcut icon" href="">
+	<title>工资系统</title>
+	<!-- Bootstrap core CSS -->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="./css/index.css" rel="stylesheet">
+	<!-- Just for debugging purposes. Don't actually copy this line! -->
+	<!--[if lt IE 9]>
+	<script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script>
+	<![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<script src="./js/jquery-1.10.2.min.js"></script>
+	<!-- avalon -->
+	<script src="./js/avalon.js"></script>
+	<!-- index -->
+	<script src="./js/selected.js"></script>
+</head>
+
+<body style="">
+
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">喵喵喵公司工资管理系统</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="./index.html">主页</a>
+					</li>
+					<li>
+						<a href="./aboutme.html">关于我们</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container main-body">
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li>
+						<a href="./index.html">添加</a>
+					</li>
+					<li class="active">
+						<a href="./updata.html">修改</a>
+					</li>
+					<li>
+						<a href="./deleted.html">删除</a>
+					</li>
+					<li>
+						<a href="./selected.html">查询</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-10" ms-controller="form-box">
+				<form role="form" class="add form-horizontal">
+					<div class="form-group" ms-repeat-el="add_input">
+						<label class="col-md-2" ms-attr-for="{{el.id}}">{{el.label}}</label>
+						<div class="col-md-10">
+							<input ms-attr-type="{{el.type}}" class="form-control" ms-attr-id="{{el.id}}" ms-attr-placeholder="请输入{{el.label}}">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-default submit_button">查询</button>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="./js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
